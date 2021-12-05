@@ -1,0 +1,968 @@
+/* font-family: 'Be Vietnam Pro', sans-serif;
+ */
+
+ :root{
+    /* primario */
+    --rojo-brillante:rgb(242,95,58);
+    --azul-oscuro:rgb(35,44,81);
+
+    /* neutro */
+    --azul-grisaceo-oscuro:rgb(143,148,167);
+    --azul-oscuro:rgb(29,30,37);
+    --rojo-palido:rgb(255,239,234);
+    --gris-claro:rgb(249,249,249);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-image: url(../img/bg-tablet-pattern.svg);
+    background-repeat:no-repeat;
+    background-position: 160% -10% ;
+}
+
+main{
+    background-image: url(../img/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: -120% 100%;
+}
+
+.boton-get{
+    background-color: var(--rojo-brillante);
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s;
+}
+
+.boton-get:hover{
+    background-color: rgb(255, 150, 124);
+    box-shadow: 0px 4px 7px rgba(255, 166, 144, 0.719);
+}
+
+p{
+    line-height: 25px;
+    color: rgba(179, 178, 183,1)
+}
+
+section{
+    padding: 0 70px;
+}
+
+.fondo{
+    position: absolute;
+    z-index: 1;
+    top: -20%;
+    right: -20%;
+}
+
+/*██████████████████████████████████████████████████████████████████████████████*/
+/*HEADER*/
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 70px 20px;
+    font-size: 13px;
+    position: relative;
+    z-index: 2;
+    
+}
+
+header  .logo{
+    display: flex;
+}
+
+header  .barra-nav{
+    display: flex;
+}
+
+
+
+header .barra-nav ul{
+    display: flex;
+    flex-direction: row;
+}
+
+header .barra-nav ul li{
+    list-style: none;
+    margin: 28px;
+
+}
+
+header .barra-nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.4s;
+}
+
+
+header .barra-nav ul li a:hover{
+    color: var(--azul-grisaceo-oscuro);
+}
+
+header .menu-hamburguesa{
+    display: none;
+}
+
+
+/*██████████████████████████████████████████████████████████████████████████████*/
+/*SECCIÓN PRINCIPAL*/
+
+#principal{  
+    padding: 0 60px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+#principal .contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    
+}
+
+#principal .graficas{
+    width: 100%;
+}
+
+#principal .graficas img{
+    width: 100%;
+}
+
+#principal .contenido h1{
+    font-size: 60px;
+    color: var(--azul-oscuro);
+}
+
+#principal .contenido p{
+    width: 62%;
+    margin: 28px 0;
+}
+
+#principal .contenido a{
+    width: 33%;
+    text-align: center;
+}
+
+/*██████████████████████████████████████████████████████████████████████████████*/
+/*Nosotros*/ 
+
+#nosotros{
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 60px;
+
+}
+
+#nosotros article{
+    width: 50%;
+}
+
+#nosotros article h2{
+    font-size: 35px;
+    color: var(--azul-oscuro);
+    font-weight: 700;
+    
+}
+#nosotros article p{
+    margin: 36px 0;
+    width: 72%;
+}
+
+#nosotros .lista{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+#nosotros .lista ol{
+    width: 85%;
+    counter-reset: li;
+}
+
+#nosotros .lista ol li{
+    margin-bottom: 40px;
+    list-style: none;
+
+    position: relative;
+}
+
+
+
+
+#nosotros .lista ol li h3{
+
+    position: relative;
+    left: -15%;
+
+    color: var(--azul-oscuro);
+    font-weight: 700;
+}
+
+#nosotros .lista ol li h3::before{
+    content:"0"counter(li);
+    counter-increment: li;
+    background-color: var(--rojo-brillante);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: white;
+    margin-right: 20px;
+
+}
+
+#nosotros .lista ol li p{
+    margin: 18px 23px;
+    font-weight: 500;
+    ;
+}
+
+
+/*██████████████████████████████████████████████████████████████████████████████*/
+/*testimonios*/
+
+#testimonios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+#testimonios h2{
+    font-size: 40px;
+    color: var(--azul-oscuro);
+}
+
+#testimonios div{
+    display: flex;
+    margin: 70px;
+}
+
+#testimonios div article{
+    background-color: var(--gris-claro);
+    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#testimonios div >.articulo-dos, #testimonios div          .articulo-tres{
+    display: flex;
+}
+
+#testimonios div article img{
+    width: 60px;
+    position: absolute;
+    top: -10%;
+}
+#testimonios div article h3{
+    margin: 50px 0 20px 0;
+}
+#testimonios div article p{
+    text-align: center;
+    color: rgba(179, 178, 183,1);
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+#testimonios .puntos {
+    display: none;
+}
+
+/*██████████████████████████████████████████████████████████████████████████████*/
+/*Footer*/
+
+footer{
+    margin-top: 180px;
+    position: relative;
+}
+
+/* ---------Footer superior------------------- */
+
+footer #footer-superior{
+    background-color: var(--rojo-brillante);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+footer #footer-superior::before{
+    content: " ";
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    opacity: 0.1;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-image: url(../img/bg-tablet-pattern.svg);
+    background-size: cover;
+    background-position: 50% 0;
+
+}
+
+footer #footer-superior::after{
+    content: " ";
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    opacity: 0.1;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-image: url(../img/bg-tablet-pattern.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 450px 120%;
+
+}
+
+
+footer #footer-superior h2{
+    font-size: 40px;
+    padding: 64px;
+    width: 60%;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+footer #footer-superior .boton-get{
+    background-color: white;
+    color: var(--rojo-brillante);
+    margin-right: 70px;
+    position: relative;
+    z-index: 2;
+    
+}
+
+footer #footer-superior .boton-get:hover{
+    color: rgb(255, 187, 170);
+    box-shadow: 0px 4px 7px rgba(255, 255, 255, 0.25);
+
+}
+
+/*-------------------- Footer inferior -------------------- */
+
+footer #footer-inferior{
+    min-height: 250px;
+    background-color: var(--azul-oscuro);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+/* -------------Redes sociales y logo --------------- */
+footer #footer-inferior .logo-redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer #footer-inferior .logo-redes img{
+    margin-bottom: 65px;
+}
+
+footer #footer-inferior .logo-redes div a{
+    margin: 3px;
+    color: white;
+    text-decoration: none;
+    box-shadow: none;
+    font-size: 20px;
+    transition: color 0.4s;
+}
+
+footer #footer-inferior .logo-redes div a:hover{
+    color: var(--rojo-brillante);
+}
+
+
+
+/* --------------------------Barra de navegación------------- */
+
+
+footer #footer-inferior nav{
+    display: flex;
+}
+footer #footer-inferior nav ul{
+    margin: 0 100px;
+}
+footer #footer-inferior nav ul li{
+    list-style: none;
+    margin: 12px;
+    font-weight: normal;
+}
+
+footer #footer-inferior nav ul li a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.4s;
+}
+
+footer #footer-inferior nav ul li a:hover{
+    color: var(--rojo-brillante);
+}
+
+
+/* -------------------------Formulario y derechos de autor ------ */
+
+footer #footer-inferior  .formulario-derechos form{
+    display: flex;
+
+}
+
+footer #footer-inferior  .formulario-derechos form input{
+    width: 180px;
+    height: 45px;
+    border-radius: 50px;
+    padding: 12px 15px;
+    border: none;
+}
+
+footer #footer-inferior  .formulario-derechos form input:invalid{
+    outline: red 1.5px solid;
+    color: red;
+}
+
+footer #footer-inferior  .formulario-derechos form input:hover{
+    border: none;
+    outline: none;
+}
+
+footer #footer-inferior  .formulario-derechos form input:focus{
+    border: none
+    ;
+    outline: none;
+}
+
+footer #footer-inferior  .formulario-derechos form button{
+    padding: 10px 20px;
+    background-color: var(--rojo-brillante);
+    border: none;
+    color: white;
+    border-radius: 50px;
+    margin: 0 10px;
+    transition: all 0.4s;
+    font-weight: 700;
+}
+
+footer #footer-inferior  .formulario-derechos form button:hover{
+    background-color: rgb(255, 166, 144);
+    color: white;
+
+}
+
+footer #footer-inferior  .formulario-derechos p{
+    margin-top: 70px;
+    font-weight: normal;
+    
+}
+
+
+/*███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████*/
+/*---------------RESPONSIVE-----------------------------------*/
+
+
+/*████████████████████████████████████████████████████████████████████████████████████████*/
+/* S */
+
+@media screen and (min-width:0px) and (max-width: 991px) {
+
+
+    body{
+        background-position: 70px  -2%;
+        background-size: 96%;
+    }
+    
+    main{
+
+        background-position: 250px 20% ;
+        background-size: 96%;
+    }
+/*██████████████████████████████████████████████████████████████████████████████*/
+/*HEADER*/
+
+    header{
+        padding: 30px 20px;
+        justify-content: space-between;
+
+
+    }
+
+    header .logo{
+        width: 32%;
+    }
+
+    header .barra-nav{
+        display: none;
+
+    }
+
+    header .menu-hamburguesa{
+        display: inline;
+        width: 8%;
+    }
+
+    /*██████████████████████████████████████████████████████████████████████████████*/
+/*SECCIÓN PRINCIPAL*/
+
+    #principal{
+        flex-direction: column-reverse;
+        padding: 0 20px;
+    }
+
+    #principal .contenido{
+        align-items: center;
+    }
+ 
+    #principal .contenido h1{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    #principal .contenido p{
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    #principal .contenido a{
+        width: 51%;
+        font-size: 14px;
+    }
+
+/*██████████████████████████████████████████████████████████████████████████████*/
+/*Nosotros*/ 
+
+    #nosotros{
+        flex-direction: column;
+        padding: 100px 0 40px 0;
+    }
+
+    #nosotros article{
+        width: 100%;
+    }
+
+    #nosotros article h2{
+        font-size: 30px;
+        text-align: center;
+        padding: 0 40px;
+    }
+#nosotros article p
+    {
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+        padding: 0 30px;
+    }
+
+    #nosotros .lista ol{
+        width: 100%;
+
+    }
+
+    #nosotros .lista ol li h3{
+        background-color: var(--rojo-palido);
+        border-radius: 30px 0 0 30px;
+        margin: 0 0 0 15px;
+        padding: 10px 0;
+        font-size: 13.5px;
+        left: 0;
+    }
+
+    #nosotros .lista ol li h3::before{
+        padding: 10px 20px;
+        font-size: 15px;
+        margin-right: 10px;
+    }
+
+    #nosotros .lista ol li p{
+        font-size: 12px;
+    }
+
+    /*██████████████████████████████████████████████████████████████████████████████*/
+/*testimonios*/
+
+
+    #testimonios h2{
+        font-size: 28px;
+    }
+
+    #testimonios div{
+        margin: 70px 10px 0px 10px;
+    }
+
+    #testimonios div article h3{
+        margin: 35px 0 20px 0;
+    }
+
+    #testimonios div article p{
+        font-size: 13px;
+    }
+
+    #testimonios div >.articulo-dos, #testimonios div          .articulo-tres{
+        display: none;
+    }
+
+    #testimonios .puntos {
+        display: inline-block;
+        font-size: 10px;
+        margin: 40px;
+    }
+
+    #testimonios .puntos i{
+        margin: 0 2px;
+        color: var(--rojo-brillante);
+    }
+
+/*██████████████████████████████████████████████████████████████████████████████*/
+/*Footer*/
+
+    footer{
+        margin-top: 60px;
+        padding: 0;
+    }
+
+
+/* ---------Footer superior------------------- */
+
+    footer #footer-superior{
+        flex-direction: column;
+        padding: 80px 40px;
+    }
+
+    footer #footer-superior::before{
+        
+        width: 100%;
+        background-position: -260px 50px;
+        background-repeat: no-repeat;
+    
+    }
+
+
+    footer #footer-superior h2{
+        font-size: 32px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    footer #footer-superior .boton-get{
+        margin: 15px 0;
+    }
+
+/*-------------------- Footer inferior -------------------- */
+
+
+    footer #footer-inferior{
+        flex-direction: column-reverse;
+        padding: 50px 20px;
+    }
+
+    /* -------------Redes sociales y logo --------------- */
+    footer #footer-inferior .logo-redes{
+    display: flex;
+    flex-direction: column-reverse;
+    }
+
+    footer #footer-inferior .logo-redes img{
+        margin-top: 60px;
+    }
+
+    footer #footer-inferior .logo-redes div a{
+        margin: 8px;
+        font-size: 30px;;
+    }
+
+
+/* --------------------------Barra de navegación------------- */
+    footer #footer-inferior nav ul{
+        margin: 30px;
+    }
+
+
+
+
+
+/* -------------------------Formulario y derechos de autor ------ */
+    footer #footer-inferior  .formulario-derechos form button{
+        padding: 10px 30px;
+    }
+
+    
+    footer #footer-inferior nav ul li a{
+        font-size: 13px;
+    }
+
+
+    
+    footer #footer-inferior  .formulario-derechos p{
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        font-size: 13px;
+        text-align: center;
+        width: 100%;
+    }
+
+}
+
+
+
+
+/*████████████████████████████████████████████████████████████████████████████████████████*/
+/* M */
+
+@media screen and (min-width: 576px) and (max-width: 991px) {
+
+    body{
+        background-position: 400px  -5%;
+        background-size: 70%;
+    }
+    
+    main{
+
+        background-position: -360px 45% ;
+        background-size: 70%;
+    }
+
+/*██████████████████████████████████████████████████████████████████████████████*/
+/*HEADER*/
+
+    header{
+        padding: 40px 50px;
+
+
+    }
+
+    header .logo{
+        width: 30%;
+    }
+
+
+    header .menu-hamburguesa{
+        display: inline;
+        width: 5%;
+    }
+
+    #principal{
+        padding: 0 30px;
+    }
+
+
+    #principal .contenido h1{
+        font-size: 50px;
+    }
+
+    #principal .contenido p{
+        font-size: 18px;
+    }
+
+    #principal .contenido a{
+        width: 30%;
+    }
+
+
+    /*██████████████████████████████████████████████████████████████████████████████*/
+/*Nosotros*/ 
+
+    #nosotros{
+        padding: 100px 0 100px 40px;
+    }
+
+    #nosotros article h2{
+        font-size: 30px;
+        padding: 0 40px;
+    }
+
+    #nosotros article p{
+        font-size: 16px;
+        padding: 0 40px;
+    }
+
+    #nosotros .lista ol li h3{
+        font-size: 16px;
+    }
+
+    #nosotros .lista ol li p{
+        font-size: 16px;
+    }
+
+
+    /*██████████████████████████████████████████████████████████████████████████████*/
+/*testimonios*/
+    #testimonios h2{
+        font-size: 32px;
+    }
+
+    #testimonios div{
+        margin: 70px 40px 0;
+    }
+
+    #testimonios div article h3{
+        font-size: 20px;
+    }
+
+    #testimonios div article p{
+        font-size: 16px;
+    }
+
+    #testimonios div article img{
+        width: 80px;
+        top: -20%;
+    }
+
+    /*██████████████████████████████████████████████████████████████████████████████*/
+/*Footer*/
+
+/* ---------Footer superior------------------- */
+
+    footer #footer-superior h2{
+        font-size: 50px;
+    }
+
+    /*-------------------- Footer inferior -------------------- */
+
+    footer #footer-inferior nav ul{
+        margin: 30px 130px 30px 100px;
+    }
+
+    footer #footer-inferior nav ul li a{
+        font-size: 18px;
+    }
+
+
+    footer #footer-inferior .logo-redes div a{
+        font-size: 40px;
+    }
+
+    footer #footer-inferior .logo-redes img{
+        width: 80%;
+    }
+
+
+    footer #footer-inferior  .formulario-derechos form input{
+        width: 300px;
+        height: 40px;
+    }
+
+    footer #footer-inferior  .formulario-derechos p{
+        font-size: 20px;
+        
+    }
+
+}
+
+/*████████████████████████████████████████████████████████████████████████████████████████*/
+/* L */
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+
+    #principal .graficas{
+        width: 120%;
+    }
+
+    #principal .contenido h1{
+        font-size: 50px;
+    }
+
+    #nosotros{
+        padding: 100px 30px;
+        
+    }
+
+    #nosotros article p{
+        width: 80%;
+    }
+
+    #nosotros .lista ol{
+        width: 90%;
+    }
+
+    #nosotros .lista ol li span{
+        left: -13%;
+    }
+
+    footer #footer-inferior  .formulario-derechos form{
+        flex-direction: column;
+        align-items: center;
+    
+    }
+
+    footer #footer-inferior  .formulario-derechos form input{
+        height: 40px;
+        margin:45px 0 10px;
+    }
+
+    footer #footer-inferior nav ul li a{
+        font-size: 16px;
+    }
+
+
+
+    footer #footer-inferior  .formulario-derechos form button{
+        width: 40%;
+    }
+
+    footer #footer-inferior  .formulario-derechos p{
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 30px;
+    }
+}
+
+
+/*████████████████████████████████████████████████████████████████████████████████████████*/
+/* XXL */
+
+@media screen and (min-width: 1400px) {
+
+
+    body{
+        background-position: 110% -2% ;
+    }
+    
+    main{
+
+        background-position: -90% 105%;
+    }
+
+    
+    #principal .contenido{
+        width: 50%;
+    }
+
+    #nosotros{
+        padding: 100px 130px;
+    }
+
+    #nosotros article h2{
+        width: 80%;
+    }
+
+    #nosotros article p{
+        width: 60%;
+    }
+}
